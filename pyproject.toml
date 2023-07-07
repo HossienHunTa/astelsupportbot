@@ -1,10 +1,8 @@
-name = "astelbot"
-version = "0.1.0"
+[project]
+name = "Astel Bot"
 description = "A Telegram bot to help Astel support department."
+readme = "README.md"
 license = "MIT"
-homepage = "https://astel.ir"
-repository = "https://github.com/astelsupportbot/astelbot"
-keywords = ["bot", "robot","telegram", "telegrambot", "telegramrobot", "simotel", "Voip"]
 authors = [
     "Hossien Mohmmadian <hossien021.m@yahoo.com>",
 ]
@@ -12,7 +10,54 @@ maintainers = [
     "Hossien Mohmmadian <hossien021.m@yahoo.com>",
     "Shgh <hossien021.m@yahoo.com>",
 ]
+keywords = ["bot", "robot","telegram", "telegrambot", "telegramrobot", "simotel", "Voip"]
+classifiers = [
+    "Programming Language :: Python",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "Pyrogram==2.0.106",
+    "requests==2.31.0",
+    "ruff==0.0.277",
+    "telegraph==2.2.0",
+    "TgCrypto==1.2.5",
+]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://astel.ir"
+repository = "https://github.com/astelsupportbot/"
+"Source Code" = "https://github.com/astelsupportbot/astelbot"
+"Issue Tracker" = "https://github.com/HossienHunTa/astelsupportbot/issues"
 
 
-[tool.poetry]
-readme = "README.md"
+[project.optional-dependencies]
+dotenv = ["python-dotenv"]
+
+[tool.flit.module]
+name = "astelbot"
+
+[tool.flit.sdist]
+include = [
+    "docs/",
+    ".gitignore",
+    ".gitattributes",
+    ".pre-commit-config.ymal",
+    "CHANGES.rst",
+    "ruff.toml",
+    "requirements.txt"
+]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["astelbot"]
+show_error_codes = true
+pretty = true
+
+
+[[tool.mypy.overrides]]
+module = [
+    "asgiref.*",
+    "dotenv.*",
+]
+ignore_missing_imports = true
