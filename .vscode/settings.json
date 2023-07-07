@@ -1,8 +1,21 @@
 {
     "cSpell.words": [
+        "aiohttp",
+        "aiosignal",
         "Astel",
         "astelbot",
+        "certifi",
+        "cfgv",
+        "distlib",
+        "filelock",
+        "frozenlist",
         "Hossien",
-        "Mohmmadain"
+        "Mohmmadain",
+        "multidict",
+        "nodeenv",
+        "platformdirs",
+        "pyaes",
+        "Pyrogram",
+        "yarl"
     ]
 }

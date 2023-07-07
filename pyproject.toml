@@ -16,7 +16,3 @@ maintainers = [
 
 [tool.poetry]
 readme = "README.md"
-packages = [
-    { include = "my_package" },
-    { include = "extra_package/**/*.py" },
-]
