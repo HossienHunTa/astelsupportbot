@@ -1,0 +1,22 @@
+name = "astelbot"
+version = "0.1.0"
+description = "A Telegram bot to help Astel support department."
+license = "MIT"
+homepage = "https://astel.ir"
+repository = "https://github.com/astelsupportbot/astelbot"
+keywords = ["bot", "robot","telegram", "telegrambot", "telegramrobot", "simotel", "Voip"]
+authors = [
+    "Hossien Mohmmadian <hossien021.m@yahoo.com>",
+]
+maintainers = [
+    "Hossien Mohmmadian <hossien021.m@yahoo.com>",
+    "Shgh <hossien021.m@yahoo.com>",
+]
+
+
+[tool.poetry]
+readme = "README.md"
+packages = [
+    { include = "my_package" },
+    { include = "extra_package/**/*.py" },
+]
